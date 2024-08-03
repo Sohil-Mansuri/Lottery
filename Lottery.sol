@@ -3,7 +3,7 @@
 pragma solidity 0.8.26;
 
 
-contract LotterySystem{
+contract LotterySystem {
 
     address public lotteryHost;
     address payable[] participants;
@@ -20,7 +20,7 @@ contract LotterySystem{
         return  hostCommission;
     }
 
-    function setLotterySystem(uint amount) public {
+    function setLotteryAmount(uint amount) public {
         require(msg.sender == lotteryHost);
         lotterAmount = amount * 1 ether;
     }
